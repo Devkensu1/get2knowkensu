@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KUNIN MO NA SI USNEK</title>
-<link rel="icon" type="image/png" href="klogo1.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <style>
@@ -28,8 +28,8 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 
 .loading-screen{position:fixed;inset:0;background:linear-gradient(135deg,#0A0E27 0%,#0F1535 100%);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .6s ease,visibility .6s ease;overflow:hidden;}
 .loading-screen.hidden{opacity:0;visibility:hidden;pointer-events:none;}
-.load-logo{font-size:15px;font-weight:900;letter-spacing:6px;color:var(--text);margin-bottom:36px;opacity:0;animation:fadeUp .6s ease-out .1s forwards;}
-.load-logo span{color:var(--accent);}
+.load-logo{margin-bottom:36px;opacity:0;animation:fadeUp .6s ease-out .1s forwards;display:flex;align-items:center;justify-content:center;}
+.load-logo img{max-width:120px;height:auto;display:block;filter:drop-shadow(0 0 10px var(--accent-glow));}
 .load-ring{position:relative;width:130px;height:130px;margin-bottom:30px;}
 .load-ring svg{transform:rotate(-90deg);width:100%;height:100%;}
 .load-ring circle{fill:none;stroke-width:3;}
@@ -315,7 +315,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
   .affiliate-badge{font-size:10px;padding:7px 14px;} .affiliate-content h2{font-size:24px;}
   .affiliate-points li{font-size:14px;} .affiliate-panel h3{font-size:17px;}
   .profile-frame{width:170px;height:170px;} .event-content{padding:20px 18px;}
-  .load-logo{font-size:12px;letter-spacing:4px;} .load-ring{width:100px;height:100px;}
+  .load-logo img{max-width:90px;} .load-ring{width:100px;height:100px;}
   .contact-box{padding:22px;} .contact-box p{font-size:12px;}
   .btn{padding:14px 24px;font-size:12px;}
   .achievement-description{font-size:15px;}
@@ -500,7 +500,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
 <canvas id="galaxyCanvas"></canvas>
 
 <div class="loading-screen" id="loadingScreen">
-  <div class="load-logo">KHENT&nbsp;<span></span></div>
+  <div class="load-logo"><img src="klogo1.png" alt="Khent Andrei Logo"></div>
   <div class="load-ring">
     <svg viewBox="0 0 130 130">
       <circle class="track" cx="65" cy="65" r="56"></circle>
@@ -556,7 +556,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
     <div class="container">
       <div class="hero">
         <div class="hero-content">
-          <div class="accent-line reveal in-view"></div>
+
         
           <h1 class="meet-mid" id="heroTitle">
             <span class="split-line">HELLO</span>
@@ -588,7 +588,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
           <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 4v14M12 18l-6-6M12 18l6-6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="hero-pricing-badge">
-          <span class="badge-flame">🔥</span> STARTING AT <span class="badge-price">₱1,000.00</span> ONLY — LIFETIME ACCESS INCLUDED
+          <span class="badge-flame"></span> STARTING AT <span class="badge-price">₱1,000.00</span> LIFETIME ACCESS
         </div>
         <div class="stat-row reveal-stagger reveal">
           <div class="highlight-card stagger-item tilt-card"><div class="tilt-shine"></div><div class="price-tag">from ₱1,000.00</div><div class="stat-number" data-target="21"><span class="cu">0</span> PORTFOLIO</div><div class="stat-label">Total Personal Portfolio Created</div></div>
@@ -601,7 +601,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
             <div class="premium-icon">💎</div>
             <div class="premium-content">
               <h4>PREMIUM QUALITY</h4>
-              <p>Modern UI • Pixel Perfect • Professional Finish</p>
+              <p>DESIGNED TO IMPRESS</p>
             </div>
           </div>
           <div class="premium-divider"></div>
@@ -609,7 +609,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
             <div class="premium-icon">⚡</div>
             <div class="premium-content">
               <h4>Fast Delivery</h4>
-              <p>RUSH ORDERS AVAILABLE | PRIORITY SUPPORT</p>
+              <p>RUSH ORDERS AVAILABLE , PRIORITY SUPPORT</p>
             </div>
           </div>
           <div class="premium-divider"></div>
@@ -617,7 +617,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
             <div class="premium-icon">∞</div>
             <div class="premium-content">
               <h4>Lifetime Access</h4>
-              <p>NO MONTHLY FEES | HIDDEN CHARGES</p>
+              <p>NO MONTHLY FEES , HIDDEN CHARGES</p>
             </div>
           </div>
         </div>
@@ -637,7 +637,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
           <div class="accent-line"></div>
         </div>
         <h3>KHENT ANDREI TENCHAVEZ</h3>
-        <p style="color:var(--text-muted);line-height:1.9;font-size:17px;margin-bottom:20px;">I'm Khent — I build brands, run socials, and ship websites fast. From esports orgs to TikTok sellers, I make things look expensive without the expensive price tag. Fast learner, adaptable to new tools, and I actually deliver on time — every time.</p>
+        <p style="color:var(--text-muted);line-height:1.9;font-size:17px;margin-bottom:20px;">I'm KHENT, I build brands, run socials, and ship websites fast. From esports orgs to TikTok sellers, I make things look expensive without the expensive price tag. Fast learner, adaptable to new tools, and I actually deliver on time — every time.</p>
         <div class="competencies">
           <h3>CORE COMPETENCIES</h3>
           <div class="skill-item">
