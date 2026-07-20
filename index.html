@@ -159,7 +159,7 @@ section{padding:100px 0;position:relative;}
 .hero-pricing-badge .badge-flame{font-size:16px;}
 .price-tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 10px;margin-bottom:12px;}
 .perk-card{position:relative;margin-top:22px;background:linear-gradient(120deg,#0F1535 0%,#1a0f30 50%,#0F1535 100%);border:1px solid var(--border);border-radius:16px;padding:22px 28px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.35);}
-.perk-card::before{content:'';position:absolute;inset:0;border-radius:16px;padding:1px;background:linear-gradient(90deg,var(--accent),var(--accent-2),var(--accent));mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.6;}
+.perk-card::before{content:'';position:absolute;inset:0;border-radius:16px;padding:1px;background:linear-gradient(90deg,var(--accent),var(--accent-2),var(--accent));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.6;}
 .perk-card-inner{position:relative;z-index:1;display:flex;align-items:center;flex-wrap:wrap;gap:18px 28px;}
 .perk-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;color:#fff;letter-spacing:.2px;}
 .perk-item .perk-icon{font-size:17px;filter:drop-shadow(0 0 6px var(--accent-glow));}
@@ -514,7 +514,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
 <div class="content-wrapper">
   <nav>
     <div class="container">
-      <div class="logo"><div class="logo-icon"><img src="klogo1.png" alt="Khent Andrei logo" onerror="this.parentElement.textContent='⚡'"></div><span>KHENT ANDREI</span></div>
+      <div class="logo"><div class="logo-icon"><img src="images/klogo1.png" alt="Khent Andrei logo" onerror="this.parentElement.textContent='⚡'"></div><span>KHENT ANDREI</span></div>
       <ul class="nav-links">
         <li><a data-nav="home" onclick="scrollToSection('home')">HOME</a></li>
         <li><a data-nav="about" onclick="scrollToSection('about')">ABOUT</a></li>
@@ -575,7 +575,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
         <div class="hero-visual">
           <div class="profile-frame" id="profileFrame">
             <div class="profile-photo">
-              <img src="kenpfp.png" alt="Khent Andrei Tenchavez" style="opacity:0;transition:opacity .4s ease-out;" onload="this.style.opacity=1" onerror="handleProfileImageError(this)">
+              <img src="images/kenpfp.png" alt="Khent Andrei Tenchavez" style="opacity:0;transition:opacity .4s ease-out;" onload="this.style.opacity=1" onerror="handleProfileImageError(this)">
             </div>
           </div>
         </div>
