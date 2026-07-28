@@ -492,6 +492,20 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
 .contact-modal-option span.label{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;}
 .contact-modal-close-x{position:absolute;top:16px;right:18px;background:none;border:none;color:var(--text-muted);font-size:22px;cursor:pointer;line-height:1;}
 .contact-modal-close-x:hover{color:var(--accent);}
+
+/* Graphic design sample gallery */
+.gfx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;}
+.gfx-card{position:relative;border-radius:16px;overflow:hidden;background:rgba(15,21,53,.6);border:1px solid var(--border);transition:transform .3s,box-shadow .3s,border-color .3s;}
+.gfx-card:hover{transform:translateY(-8px);border-color:var(--accent);box-shadow:0 18px 36px rgba(0,0,0,.4),0 0 26px var(--accent-glow);}
+.gfx-card-img{width:100%;height:160px;overflow:hidden;background:linear-gradient(135deg,var(--border),var(--card-bg));}
+.gfx-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}
+.gfx-card:hover .gfx-card-img img{transform:scale(1.06);}
+.gfx-card-label{padding:16px 16px 18px;position:relative;z-index:1;}
+.gfx-card-label h4{font-size:13.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;}
+.gfx-card-label span{display:block;margin-top:4px;font-size:11px;color:var(--text-muted);letter-spacing:.5px;text-transform:uppercase;}
+.gfx-card-empty{height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,rgba(255,10,128,.06),rgba(0,229,255,.04));border-bottom:1px dashed var(--border);}
+.gfx-card-empty .gfx-empty-icon{font-size:30px;opacity:.5;}
+.gfx-card-empty .gfx-empty-text{font-size:10.5px;letter-spacing:2px;color:var(--text-muted);text-transform:uppercase;opacity:.7;}
 </style>
 </head>
 <body>
@@ -521,6 +535,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
         
         <li><a data-nav="home" onclick="scrollToSection('home')">HOME</a></li>
         <li><a data-nav="about" onclick="scrollToSection('about')">ABOUT</a></li>
+        <li><a data-nav="gfx" onclick="scrollToSection('gfx')">GFX</a></li>
         <li><a data-nav="affiliate" onclick="scrollToSection('affiliate')">AFFILIATE</a></li>
         <li><a data-nav="testimonials" onclick="scrollToSection('testimonials')">REVIEWS</a></li>
         <li><a data-nav="portfolio" onclick="scrollToSection('portfolio')">PORTFOLIO</a></li>
@@ -535,6 +550,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
     <ul>
       <li><a data-nav="home" onclick="scrollToSection('home');closeMobileNav();">Home</a></li>
       <li><a data-nav="about" onclick="scrollToSection('about');closeMobileNav();">About</a></li>
+      <li><a data-nav="gfx" onclick="scrollToSection('gfx');closeMobileNav();">GFX Samples</a></li>
       <li><a data-nav="affiliate" onclick="scrollToSection('affiliate');closeMobileNav();">Affiliate</a></li>
       <li><a data-nav="testimonials" onclick="scrollToSection('testimonials');closeMobileNav();">Reviews</a></li>
       <li><a data-nav="portfolio" onclick="scrollToSection('portfolio');closeMobileNav();">Portfolio</a></li>
@@ -546,6 +562,7 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
   <div class="side-nav" id="sideNav">
     <a href="#home" data-target="home"><span>Home</span></a>
     <a href="#about" data-target="about"><span>About</span></a>
+    <a href="#gfx" data-target="gfx"><span>GFX</span></a>
     <a href="#affiliate" data-target="affiliate"><span>Affiliate</span></a>
     <a href="#testimonials" data-target="testimonials"><span>Reviews</span></a>
     <a href="#portfolio" data-target="portfolio"><span>Portfolio</span></a>
@@ -656,6 +673,141 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
             <div class="skill-header"><span class="skill-label">AI-Assisted Workflow</span><span class="skill-percentage" data-target="88">0%</span></div>
             <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gfx" style="overflow:hidden;">
+    <div class="glow-orb" style="width:300px;height:300px;background:var(--accent-2);top:-30px;left:5%;animation-delay:-2s;"></div>
+    <div class="container">
+      <div class="section-title reveal">
+        <h2 class="meet-mid"><span class="half-left">GRAPHIC DESIGN</span> <span class="half-right accent">SAMPLES</span></h2>
+        <div class="accent-line"></div>
+      </div>
+      <p class="achievement-description reveal">A quick look at the kind of graphics I make — from ads and thumbnails to full promo campaigns. More samples added regularly.</p>
+
+      <div class="gfx-grid reveal-stagger reveal">
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-img"><img src="ADVERTISEMENT.png" alt="Advertisement design sample" loading="lazy"></div>
+          <div class="gfx-card-label"><h4>Advertisement</h4><span>Ad Creative</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-img"><img src="THUMBNAIL.png" alt="Thumbnail design sample" loading="lazy"></div>
+          <div class="gfx-card-label"><h4>Thumbnail</h4><span>YouTube / Video</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-img"><img src="PROMOTION.png" alt="Promotion design sample" loading="lazy"></div>
+          <div class="gfx-card-label"><h4>Promotion</h4><span>Promo Graphic</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-img"><img src="ESPORT%20PUBMATS.png" alt="Esports pubmat design sample" loading="lazy"></div>
+          <div class="gfx-card-label"><h4>Esport Pubmats</h4><span>Esports Branding</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-img"><img src="PERSONAL%20PUBMATS.png" alt="Personal pubmat design sample" loading="lazy"></div>
+          <div class="gfx-card-label"><h4>Personal Pubmats</h4><span>Personal Branding</span></div>
+        </div>
+
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Campaign Poster</h4><span>Marketing Poster</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>TikTok Business</h4><span>TikTok Shop Creative</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Shopee Business</h4><span>Shopee Store Creative</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Ecommerce</h4><span>Product Listing Graphic</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Social Media Kit</h4><span>Post &amp; Story Templates</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Logo &amp; Branding</h4><span>Brand Identity</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Event Flyer</h4><span>Event Announcement</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Menu Design</h4><span>Food &amp; Beverage</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Commercial Ad</h4><span>Product Commercial</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Lazada Business</h4><span>Lazada Store Creative</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Amazon Listing</h4><span>Ecommerce Listing</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Product Packaging</h4><span>Packaging Design</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Billboard Ad</h4><span>Outdoor Advertising</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Business Card</h4><span>Print Collateral</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Company Profile</h4><span>Corporate Deck</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Banner Ad</h4><span>Web Banner</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Catalog Design</h4><span>Product Catalog</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Flyer &amp; Brochure</h4><span>Print Marketing</span></div>
+        </div>
+        <div class="gfx-card stagger-item tilt-card">
+          <div class="tilt-shine"></div>
+          <div class="gfx-card-empty"><span class="gfx-empty-icon">⚠</span><span class="gfx-empty-text">Image Corrupted</span></div>
+          <div class="gfx-card-label"><h4>Brand Guidelines</h4><span>Style Guide</span></div>
         </div>
       </div>
     </div>
@@ -1259,7 +1411,7 @@ function onScroll(){
   const frame = document.getElementById('profileFrame');
   if(frame) frame.style.transform = `translateY(${scrollTop*0.06}px)`;
 
-  const sections = ['home','about','affiliate','testimonials','portfolio','achievements','process','contact'];
+  const sections = ['home','about','gfx','affiliate','testimonials','portfolio','achievements','process','contact'];
   let current = sections[0];
   sections.forEach(id=>{
     const el = document.getElementById(id);
