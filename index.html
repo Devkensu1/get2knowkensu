@@ -494,26 +494,40 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
 .contact-modal-close-x:hover{color:var(--accent);}
 
 /* Graphic design sample gallery */
-/* Graphic design sample gallery */
-.gfx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
-@media (max-width:900px){
-  .gfx-grid{grid-template-columns:repeat(2,1fr);}
-}
-@media (max-width:480px){
-  .gfx-grid{grid-template-columns:repeat(1,1fr);}
-}
+/* Updated: 4 columns (desktop), 16:9 image cards, readable on desktop & mobile */
+.gfx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
 .gfx-card{position:relative;border-radius:16px;overflow:hidden;background:rgba(15,21,53,.6);border:1px solid var(--border);transition:transform .3s,box-shadow .3s,border-color .3s;}
 .gfx-card:hover{transform:translateY(-8px);border-color:var(--accent);box-shadow:0 18px 36px rgba(0,0,0,.4),0 0 26px var(--accent-glow);}
-.gfx-card-img{width:100%;height:160px;overflow:hidden;background:linear-gradient(135deg,var(--border),var(--card-bg));position:relative;}
+.gfx-card-img{width:100%;aspect-ratio:16/9;height:auto;overflow:hidden;background:linear-gradient(135deg,var(--border),var(--card-bg));position:relative;}
 .gfx-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;user-select:none;-webkit-user-select:none;-webkit-user-drag:none;pointer-events:none;}
 .gfx-card:hover .gfx-card-img img{transform:scale(1.06);}
 .gfx-card-img .gfx-protect-layer{position:absolute;inset:0;z-index:2;background:transparent;}
-.gfx-card-label{padding:16px 16px 18px;position:relative;z-index:1;}
-.gfx-card-label h4{font-size:13.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;}
-.gfx-card-label span{display:block;margin-top:4px;font-size:11px;color:var(--text-muted);letter-spacing:.5px;text-transform:uppercase;}
-.gfx-card-empty{height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,rgba(255,10,128,.06),rgba(0,229,255,.04));border-bottom:1px dashed var(--border);}
-.gfx-card-empty .gfx-empty-icon{font-size:30px;opacity:.5;}
-.gfx-card-empty .gfx-empty-text{font-size:10.5px;letter-spacing:2px;color:var(--text-muted);text-transform:uppercase;opacity:.7;}
+.gfx-card-label{padding:18px 18px 20px;position:relative;z-index:1;}
+.gfx-card-label h4{font-size:15px;font-weight:800;letter-spacing:1px;text-transform:uppercase;}
+.gfx-card-label span{display:block;margin-top:4px;font-size:12.5px;color:var(--text-muted);letter-spacing:.5px;text-transform:uppercase;}
+.gfx-card-empty{width:100%;aspect-ratio:16/9;height:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,rgba(255,10,128,.06),rgba(0,229,255,.04));border-bottom:1px dashed var(--border);}
+.gfx-card-empty .gfx-empty-icon{font-size:36px;opacity:.5;}
+.gfx-card-empty .gfx-empty-text{font-size:12px;letter-spacing:2px;color:var(--text-muted);text-transform:uppercase;opacity:.7;}
+
+@media (max-width:900px){
+  .gfx-grid{grid-template-columns:repeat(3,1fr);gap:20px;}
+}
+@media (max-width:640px){
+  .gfx-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
+  .gfx-card-label{padding:14px 14px 16px;}
+  .gfx-card-label h4{font-size:13.5px;}
+  .gfx-card-label span{font-size:11px;}
+  .gfx-card-empty .gfx-empty-icon{font-size:30px;}
+  .gfx-card-empty .gfx-empty-text{font-size:10.5px;}
+}
+@media (max-width:400px){
+  .gfx-grid{grid-template-columns:1fr;gap:16px;}
+  .gfx-card-label{padding:16px 14px 18px;}
+  .gfx-card-label h4{font-size:14.5px;}
+  .gfx-card-label span{font-size:11.5px;}
+  .gfx-card-empty .gfx-empty-icon{font-size:34px;}
+  .gfx-card-empty .gfx-empty-text{font-size:11px;}
+}
 </style>
 </head>
 <body>
@@ -521,7 +535,6 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 <canvas id="galaxyCanvas"></canvas>
-
   
 <div class="loading-screen" id="loadingScreen">
   <div class="load-logo"><img src="klogo1.png" alt="Khent Andrei Logo"></div>
@@ -689,11 +702,6 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
       </div>
     </div>
   </section>
-
-<div class="gfx-grid reveal-stagger reveal">
-
-  <!-- Special clickable card -->
-</section>
 
 <section id="gfx" style="overflow:hidden;">
   <div class="glow-orb" style="width:300px;height:300px;background:var(--accent-2);top:-30px;left:5%;animation-delay:-2s;"></div>
