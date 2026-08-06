@@ -186,6 +186,20 @@ section{padding:100px 0;position:relative;}
 .about-content h2{font-size:54px;font-weight:900;text-transform:uppercase;margin-bottom:16px;letter-spacing:-1px;}
 .about-content h3{font-size:27px;font-weight:700;text-transform:uppercase;margin:32px 0 12px 0;}
 .competencies{margin-top:40px;}
+.exp-section{margin-top:56px;}
+.exp-section h3{font-size:27px;font-weight:700;text-transform:uppercase;margin-bottom:24px;}
+.exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.exp-card{position:relative;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;border-radius:14px;background:rgba(15,21,53,.55);border:1px solid var(--border);backdrop-filter:blur(8px);overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s;}
+.exp-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--accent),var(--accent-2));opacity:.85;}
+.exp-card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 14px 28px rgba(0,0,0,.35),0 0 20px var(--accent-glow);}
+.exp-role{font-size:14.5px;font-weight:700;letter-spacing:.4px;color:var(--text);padding-left:6px;}
+.exp-years{flex-shrink:0;display:inline-flex;align-items:center;padding:6px 14px;border-radius:999px;background:linear-gradient(135deg,rgba(255,10,128,.16),rgba(0,229,255,.12));border:1px solid var(--accent);color:var(--accent-light);font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap;box-shadow:0 0 12px var(--accent-glow);}
+@media (max-width:640px){
+  .exp-grid{grid-template-columns:1fr;}
+  .exp-card{padding:16px 18px;}
+  .exp-role{font-size:13.5px;}
+  .exp-years{font-size:11px;padding:5px 12px;}
+}
 .skill-item{margin-bottom:28px;transition:all .3s;}
 .skill-item:hover{transform:translateX(8px);}
 .skill-header{display:flex;justify-content:space-between;margin-bottom:10px;}
@@ -679,7 +693,25 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
           <div class="accent-line"></div>
         </div>
         <h3>KHENT ANDREI TENCHAVEZ</h3>
-        <p style="color:var(--text-muted);line-height:1.9;font-size:17px;margin-bottom:20px;">I'm KHENT, I build brands, run socials, and ship websites fast. From esports orgs to TikTok sellers, I make things look expensive without the expensive price tag. Fast learner, adaptable to new tools, and I actually deliver on time — every time.</p>
+        <p style="color:var(--text-muted);line-height:1.9;font-size:17px;margin-bottom:20px;">Hi, I'm Khent Andrei Tenchavez, a multidisciplinary creative professional with nearly 8 years of experience in graphic design and a diverse background in digital marketing, social media, management, and esports.</p>
+        <p style="color:var(--text-muted);line-height:1.9;font-size:17px;margin-bottom:20px;">Throughout my career, I've worked as a Graphic Designer, Basic Video Editor, Social Media Manager, Social Media Consultant, Virtual Assistant, Manager, Brand Ambassador, and Esports Team Handler, giving me a well-rounded understanding of both creative execution and business operations. This experience allows me to approach every project with a balance of creativity, strategy, and efficiency.</p>
+        <p style="color:var(--text-muted);line-height:1.9;font-size:17px;margin-bottom:20px;">I specialize in creating visually compelling designs, managing engaging social media campaigns, and building strong brand identities that help businesses grow. I'm a fast learner who adapts quickly to new tools and technologies, communicates effectively with teams and clients, and consistently delivers quality work on time.</p>
+        <p style="color:var(--text-muted);line-height:1.9;font-size:17px;margin-bottom:20px;">Whether I'm designing marketing materials, editing videos, managing social media, or supporting business operations, my goal is always the same: to produce work that is professional, impactful, and results-driven.</p>
+        <div class="exp-section reveal-stagger reveal">
+          <h3>SOME EXPERIENCE</h3>
+          <div class="exp-grid">
+            <div class="exp-card stagger-item"><span class="exp-role">Graphic Designer</span><span class="exp-years">~8 Years</span></div>
+            <div class="exp-card stagger-item"><span class="exp-role">Video Editor</span><span class="exp-years">4 Years</span></div>
+            <div class="exp-card stagger-item"><span class="exp-role">Social Media Manager</span><span class="exp-years">3 Years</span></div>
+            <div class="exp-card stagger-item"><span class="exp-role">Operations &amp; Team Manager</span><span class="exp-years">2 Years</span></div>
+            <div class="exp-card stagger-item"><span class="exp-role">Brand Ambassador</span><span class="exp-years">2 Years</span></div>
+            <div class="exp-card stagger-item"><span class="exp-role">Esports Team Manager</span><span class="exp-years">2 Years</span></div>
+            <div class="exp-card stagger-item"><span class="exp-role">Esports Team Handler</span><span class="exp-years">2 Years</span></div>
+            <div class="exp-card stagger-item"><span class="exp-role">Social Media Consultant</span><span class="exp-years">1 Year</span></div>
+            <div class="exp-card stagger-item"><span class="exp-role">Virtual Assistant</span><span class="exp-years">1 Year</span></div>
+            <div class="exp-card stagger-item"><span class="exp-role">Encoder</span><span class="exp-years">1 Year</span></div>
+          </div>
+        </div>
         <div class="competencies">
           <h3>CORE COMPETENCIES</h3>
           <div class="skill-item">
@@ -691,12 +723,28 @@ footer{border-top:1px solid var(--border);padding:60px 0;background:rgba(10,14,3
             <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-header"><span class="skill-label">Web &amp; Mobile Development</span><span class="skill-percentage" data-target="85">0%</span></div>
+            <div class="skill-header"><span class="skill-label">Web &amp; Mobile Development</span><span class="skill-percentage" data-target="49">0%</span></div>
             <div class="skill-bar"><div class="skill-bar-fill" data-width="68"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-header"><span class="skill-label">AI-Assisted Workflow</span><span class="skill-percentage" data-target="88">0%</span></div>
+            <div class="skill-header"><span class="skill-label">AI-Assisted Workflow</span><span class="skill-percentage" data-target="36">0%</span></div>
             <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-label">Video Editing</span><span class="skill-percentage" data-target="76">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-label">Brand &amp; Campaign Management</span><span class="skill-percentage" data-target="92">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-label">Team &amp; Operations Management</span><span class="skill-percentage" data-target="90">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-label">Client Communication</span><span class="skill-percentage" data-target="94">0%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
           </div>
         </div>
       </div>
